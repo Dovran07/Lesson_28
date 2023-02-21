@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/splide.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <style>
+        .bg-purple {
+            background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-purple">
+        <div class="container-lg py-5">
+            <div class="splide" id="about">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="img/background1.jpg" alt="" class="img-fluid">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/background2.jpg" alt="" class="img-fluid">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/background4.jpg" alt="" class="img-fluid">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/background3.jpg" alt="" class="img-fluid">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/background2.jpg" alt="" class="img-fluid">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/background4.jpg" alt="" class="img-fluid">
+                        </li>
+                    </ul>
+                </div>
+                <div class="splide__progress">
+                    <div class="splide__progress__bar">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('#about', {
+                type: 'loop',
+                drag: 'free',
+                perPage: 4,
+                perMove: 1,
+                autoplay: true,
+                gap: '1.5rem',
+                padding: '3rem',
+                arrows: false,
+                interval: 3000,
+                breakpoints: {
+                    991: {
+                        perPage: 3,
+                    },
+                    576: {
+                        perPage: 2,
+                    },
+                },
+            });
+            splide.mount();
+        });
+    </script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
